@@ -1,7 +1,12 @@
 from settings import SQL_BASE, SERVER_HOST, SERVER_PORT
-from server.sql_base.pharmacy_db import base_worker
+
+import sys
+
+sys.path.append('C:/Demo_exam2/')
+
+from src.server.sql_base.pharmacy_db import base_worker
 from fastapi import FastAPI
-from server.router import routers
+from src.server.router import routers
 from uvicorn import run
 from fastapi.responses import RedirectResponse
 
